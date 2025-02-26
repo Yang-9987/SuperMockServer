@@ -34,6 +34,45 @@ export type Database = {
   }
   public: {
     Tables: {
+      MockLink: {
+        Row: {
+          enabled: boolean | null
+          id: string
+          info: string | null
+          level: string | null
+          link: string | null
+          model_id: string | null
+          name: string
+          params: Json | null
+          type: string | null
+          user_id: string | null
+        }
+        Insert: {
+          enabled?: boolean | null
+          id?: string
+          info?: string | null
+          level?: string | null
+          link?: string | null
+          model_id?: string | null
+          name?: string
+          params?: Json | null
+          type?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          enabled?: boolean | null
+          id?: string
+          info?: string | null
+          level?: string | null
+          link?: string | null
+          model_id?: string | null
+          name?: string
+          params?: Json | null
+          type?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
       MockRule: {
         Row: {
           created_at: string | null
@@ -108,7 +147,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      hello_world: {
+        Args: Record<PropertyKey, never>
+        Returns: string
+      }
     }
     Enums: {
       [_ in never]: never
